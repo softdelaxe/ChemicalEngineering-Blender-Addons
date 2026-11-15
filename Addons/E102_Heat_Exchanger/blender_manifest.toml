@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "e102_heat_exchanger"
+version = "1.1.2"
+name = "E-102 Heat Exchanger Designer"
+tagline = "Heat exchanger design and 3D visualization"
+maintainer = "Engr Peter Ebogha"
+type = "add-on"
+blender_version_min = "5.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
+copyright = ["2026 Engr Peter Ebogha"]

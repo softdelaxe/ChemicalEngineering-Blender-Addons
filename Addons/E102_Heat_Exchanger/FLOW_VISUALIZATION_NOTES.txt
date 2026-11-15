@@ -1,0 +1,22 @@
+E-102 FLOW VISUALIZATION - VERSION 1.1.1
+
+Implemented:
+- WCO tube-side stream remains visually distinct.
+- Shell-side stream responds to the selected heating medium.
+- Seven media have distinct display colours, labels, particle scales and
+  line thicknesses.
+- Shell-side path station count responds to the configured baffle count as
+  an illustrative visual guide.
+- Generated objects carry fluid_service, visualization_type and
+  is_cfd_result=False metadata.
+- Existing hot_water_* result keys are retained as aliases so the current
+  operator continues to work.
+
+Not implemented:
+- CFD solver or CFD mesh.
+- Local velocity, pressure or temperature fields.
+- Turbulence, multiphase flow or steam condensation calculations.
+- Shell-side bypass, leakage, window flow and detailed baffle hydraulics.
+- Physical tube-pass return bends or pass-partition geometry.
+
+The animation must not be interpreted as a validated flow solution.

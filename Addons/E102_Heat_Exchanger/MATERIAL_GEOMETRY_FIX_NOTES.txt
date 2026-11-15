@@ -1,0 +1,25 @@
+E-102 HEAT EXCHANGER - MATERIAL AND CHANNEL-HEAD FIXES
+
+Changes in this build:
+1. Equipment generation now initializes the E-102 material library when no
+   material dictionary is supplied.
+2. Shell and both channel heads use the transparent blue inspection material.
+   Tubes, tubesheets, baffles, flanges, bolts and supports retain metallic/
+   solid materials.
+3. Blender 5.x transparency uses DITHERED surface rendering, with a guarded
+   BLENDED fallback for older builds.
+4. Left channel head is explicitly generated toward -X; right head toward +X.
+   No negative object scale or manual mirroring is required.
+5. Channel-head base references are positioned at the outer faces of the
+   tubesheets, with the configured 10 mm lap applied by geometry.py.
+6. Channel-head axial depth now uses channel_head_length_m. The generated
+   geometry is an ellipsoidal hollow head rather than a hemisphere whose depth
+   was incorrectly fixed to the shell radius.
+7. Tube-side nozzles and flanges are positioned from the channel-head dome apex.
+8. Tubesheet radius now includes shell wall thickness and edge allowance.
+
+Validation performed:
+- Python compileall passed.
+- ZIP integrity passed.
+- Not yet executed inside Blender 5.3; please rebuild and inspect before
+  treating the geometry as runtime-verified.
